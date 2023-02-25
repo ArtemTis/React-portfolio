@@ -10,7 +10,7 @@ const Progects = () => {
                 <h2 className="title-1">Projects</h2>
                 <ul className="projects">
 
-                    {projects.map(project => <Project key={project.title} project={project} />)}
+                    {projects.map((project, index) => <Project key={project.title} project={project} index={index}/>)}
 
                 </ul>
             </div>

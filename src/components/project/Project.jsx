@@ -1,15 +1,16 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 import './style.css'
 
 
-const Project = ({project}) => {
+const Project = ({ project, index }) => {
     return (
-        <li className="project">
-            <a href="./project-page.html">
+        <NavLink to={`/project/${index}`}>
+            <li className="project">
                 <img src={project.img} alt={project.title} className="project__img" />
                 <h3 className="project__title">{project.title}</h3>
-            </a>
-        </li>
+            </li>
+        </NavLink>
     )
 }
 
